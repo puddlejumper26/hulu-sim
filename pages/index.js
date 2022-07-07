@@ -1,10 +1,12 @@
 import Head from 'next/head'
 import Header from '../components/Header'
 import Nav from '../components/Nav'
+import Results from '../components/Results'
+import requests from '../utils/requests'
 // import Image from 'next/image'
 // import styles from '../styles/Home.module.css'
 
-export default function Home() {
+export default function Home({ results }) {
   return (
     <div>
       <Head>
@@ -19,6 +21,19 @@ export default function Home() {
       {/* Nav */}
       <Nav />
       {/* Result */}
+      <Results results={results} />
     </div>
   )
 }
+
+export async function getServerSideProps(context) {
+  const genre = context.query.genre;
+
+  const request = await fetch(`https://api.themoviedb.org/3/movie/550?api_key=d1397e79d7a9ade6ef9afd3adfd36453`).then((res) => res.json());
+
+  // return request;
+  return {
+    props: { results: request }
+  }
+}
+
