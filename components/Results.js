@@ -1,9 +1,10 @@
-function Results({ requests }) {
+import Thumbnail from "./Thumbnail"
+
+function Results(props) {
+    const result = props.results
     return (
         <div>
-            {/* {requests.map(result => (
-                <Thumbnail />
-            ))} */}
+            <Thumbnail key={result.id} result={result} />
         </div>
     )
 
