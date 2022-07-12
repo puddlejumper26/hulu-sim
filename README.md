@@ -12,15 +12,15 @@ npm run dev
 yarn dev
 ```
 
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
 ## Tech Stack
 - Next.js
 - tailwind.css
 - tailwind-scrollbar-hide
 - heroicons
 - react-flip-move
-- 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Resources
 - based on this youtube video  https://www.youtube.com/watch?v=MqDlsjc8GLo
